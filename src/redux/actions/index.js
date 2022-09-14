@@ -8,7 +8,7 @@ export const SetProducts = (products) => {
 export const SelectProduct = (product) => {
   return {
     type: 'SELECT_PRODUCT',
-    payloade: product,
+    payload: product,
   };
 };
 

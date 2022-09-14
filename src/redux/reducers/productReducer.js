@@ -11,7 +11,7 @@ export const productReducer = (state = initialState, action) => {
   }
 };
 
-export const setProduct = (state = {}, action) => {
+export const setProduct = (state = initialState, action) => {
   switch (action.type) {
     case 'SELECT_PRODUCT':
       return { ...state, ...action.payload };
