@@ -1,12 +1,18 @@
 import React from 'react';
 import './style.css';
-// import FNC from './test/functionalComponent';
-// import CLC from './test/classComponent';
-import Header from './redux/main/productListing';
-export default function App() {
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Header from './redux/main/Header';
+import ProductListing from './redux/main/productListing';
+function App() {
   return (
-    <div>
+    <BrowserRouter>
       <Header />
-    </div>
+      <Routes>
+        <Route path="/" element={<ProductListing />} />
+
+        {/* <Route path=":teamId" element={<Team />} /> */}
+      </Routes>
+    </BrowserRouter>
   );
 }
+export default App;
